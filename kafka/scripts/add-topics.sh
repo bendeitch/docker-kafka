@@ -31,4 +31,5 @@ fi
 # Add Kafka topics...
 echo "Adding topics..."
 $KAFKA_HOME/bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic trade-statistic --partitions 1 --replication-factor 1
+$KAFKA_HOME/bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic trade-statistic-totals --partitions 1 --replication-factor 1 --config cleanup.policy=compact
 
